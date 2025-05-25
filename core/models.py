@@ -12,6 +12,9 @@ class Repository(TimeStampedModel):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     start = models.PositiveIntegerField(default=0)
 
+    class Meta:
+        verbose_name = 'Repository'
+        verbose_name_plural = 'Repositories'
 
     def __str__(self):
         return self.name
